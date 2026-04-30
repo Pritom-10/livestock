@@ -11,7 +11,7 @@ const Featured = async () => {
     return (
       <div>
         <h1>Featured</h1>
-        <div>
+        <div className="grid grid-cols-4 gap-5">
           {topFour.map((cows) => (
             <Featured_card key={cows.id} cows={cows} />
           ))}
