@@ -23,14 +23,14 @@ const Navbar = () => {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <Link href={"/all-photos"}>All Photos</Link>
+            <Link href={"/all-animals"}>All Animals</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href={"/pricing"}>Pricing</Link>
           </li>
           <li>
             <Link href={"/profile"}>Profile</Link>
-          </li>
+          </li> */}
         </ul>
 
         <div className="flex gap-4">

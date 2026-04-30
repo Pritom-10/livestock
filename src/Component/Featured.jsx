@@ -4,8 +4,7 @@ import Featured_card from "./Featured_card";
 const Featured = async () => {
   const res =await fetch("https://livestock-gules.vercel.app/data.json");
   const photos = await res.json();
-  console.log(photos);
-  
+
   const topFour = photos.slice(0, 4)
   
     return (

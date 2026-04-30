@@ -4,8 +4,8 @@ import { MdLocationPin } from "react-icons/md";
 import { GiWeight } from "react-icons/gi";
 import { Card, Separator } from "@heroui/react";
 import Image from "next/image";
+import { Link } from "@heroui/react";
 const Featured_card = ({ cows }) => {
-  console.log(cows.image);
 
   return (
     <Card className="border rounded-xl">
@@ -17,7 +17,9 @@ const Featured_card = ({ cows }) => {
           className="object-cover rounded-xl"
           sizes="(max-w:768) 100vw, (max-w:1200) 50vw, 33vw"
         />
-        <Chip className="absolute right-2 top-2" size="sm">{cows.category}</Chip>
+        <Chip className="absolute right-2 top-2" size="sm">
+          {cows.category}
+        </Chip>
       </div>
       <div>
         <h2>{cows.name}</h2>
@@ -37,7 +39,9 @@ const Featured_card = ({ cows }) => {
           <p>{cows.location}</p>
         </div>
       </div>
-      <Button variant="outline" className={'w-full'}>View Details</Button>
+      <Link href={`/all-animals/${cows.id}`} className={"w-full"}>
+        <Button variant="outline">View Details</Button>
+      </Link>
     </Card>
   );
 };
