@@ -1,13 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-
+import { Chip } from "@heroui/react";
+import { Button } from "@heroui/react";
 import { MdLocationPin } from "react-icons/md";
 import { GiWeight } from "react-icons/gi";
 import { Card, Separator } from "@heroui/react";
 import Image from "next/image";
 const Featured_card = ({ cows }) => {
   console.log(cows.image);
-  
+
   return (
     <Card className="border rounded-xl">
       <div className="relative w-full aspect-square">
@@ -18,6 +17,7 @@ const Featured_card = ({ cows }) => {
           className="object-cover rounded-xl"
           sizes="(max-w:768) 100vw, (max-w:1200) 50vw, 33vw"
         />
+        <Chip className="absolute right-2 top-2" size="sm">{cows.category}</Chip>
       </div>
       <div>
         <h2>{cows.name}</h2>
@@ -37,6 +37,7 @@ const Featured_card = ({ cows }) => {
           <p>{cows.location}</p>
         </div>
       </div>
+      <Button variant="outline" className={'w-full'}>View Details</Button>
     </Card>
   );
 };
