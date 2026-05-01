@@ -14,6 +14,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignIn() {
  
@@ -32,6 +33,12 @@ export default function SignIn() {
     
     
   };
+
+  const handleGoogle = async () => {
+    await authClient.signIn.social({
+      provider:'google'
+    })
+  }
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
@@ -94,6 +101,8 @@ export default function SignIn() {
           </Button>
         </div>
       </Form>
+      <p className="text-center text-2xl">Or</p>
+      <Button onClick={handleGoogle} variant="outline" className={'w-full'}> <GrGoogle/> Sign in with google</Button>
     </Card>
   );
 }
