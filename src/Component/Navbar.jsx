@@ -35,10 +35,10 @@ const Navbar = () => {
           </li>
           {/* <li>
             <Link href={"/pricing"}>Pricing</Link>
-          </li>
+          </li> */}
           <li>
             <Link href={"/profile"}>Profile</Link>
-          </li> */}
+          </li>
         </ul>
 
         <div className="flex gap-4">
