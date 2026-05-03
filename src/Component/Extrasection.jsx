@@ -1,18 +1,32 @@
 import Image from "next/image";
-import { FaCheckCircle, FaShieldAlt, FaTags, FaHeadset } from "react-icons/fa";
+import { FaCheckCircle, FaShieldAlt, FaTags, FaHeadset, FaArrowRight } from "react-icons/fa";
 import { Card } from "@heroui/react";
+import { Button } from "@heroui/react";
 export default function ExtraSection({cow}) {
  
   
   return (
     <div className="grid grid-cols-3 gap-5 max-w-7xl mx-auto">
       <Card>
-        <div className="space-y-4">
+        <div className="space-y-12">
           {cow.map((cows) => (
-            <div key={cows.id} className="flex items-center gap-2">
-              <Image width={50} height={30} src={cows.image} alt={cows.name} />
-              <p className="font-semibold">{cows.name}</p>
-              <p className="text-sm text-gray-500">{cows.description}</p>
+            <div key={cows.id} className="flex items-center gap-5">
+              <div>
+                <Image
+                  width={100}
+                  height={70}
+                  src={cows.image}
+                  className="rounded-xl shadow-sm"
+                  alt={cows.name}
+                />
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-4">
+                  <p className="font-semibold">{cows.name}</p>
+                  <p className="bg-green-300 rounded-2xl p-2">{cows.breed}</p>
+                </div>
+                <p className="text-sm text-gray-500">{cows.description}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -22,100 +36,97 @@ export default function ExtraSection({cow}) {
         <h2 className="text-xl font-bold mb-4">Qurbani Tips</h2>
 
         <ul className="space-y-3 text-sm text-gray-600">
-          <li className="flex gap-2 items-start">
-            <FaCheckCircle className="text-green-600 mt-1" />
-            Choose a healthy animal with clear eyes and active behavior
+          <li className="flex items-center gap-3">
+            <FaCheckCircle size={20} className="text-green-600" />
+
+            <div>
+              <p className="font-bold text-[18px]">Choose a healthy animal</p>
+              <p className="text-sm text-gray-500">
+                Check the animals health, eyes, nose and skin properly
+              </p>
+            </div>
           </li>
-          <li className="flex gap-2 items-start">
-            <FaCheckCircle className="text-green-600 mt-1" />
-            Check minimum age requirement properly
+          <li className="flex gap-3 items-center">
+            <FaCheckCircle size={20} className="text-green-600 mt-1" />
+            <div>
+              <p className="font-bold text-[18px]">Check the age </p>
+              <p className="text-sm text-gray-500">
+                Make sure the animal meets the minimum age requirement
+              </p>
+            </div>
           </li>
-          <li className="flex gap-2 items-start">
-            <FaCheckCircle className="text-green-600 mt-1" />
-            Ensure proper feeding and clean environment
+          <li className="flex gap-3 items-cemter">
+            <FaCheckCircle size={20} className="text-green-600 mt-1" />
+            <div>
+              <p className="font-bold text-[18px]">Proper feeding</p>
+              <p className="text-sm text-gray-500">
+                Give healthy food and clean water for better growth
+              </p>
+            </div>
+          </li>
+          <li className="flex gap-3 items-center">
+            <FaCheckCircle size={20} className="text-green-600 mt-1" />
+            <div>
+              <p className="font-bold text-[18px]">Clean and safe handling</p>
+              <p className="text-sm text-gray-500">
+                Keep the animal in a clean environment and handle with care.
+              </p>
+            </div>
           </li>
         </ul>
+        <Button variant="outline" className={"mt-2"}>
+          Read More tips <FaArrowRight />
+        </Button>
       </div>
       <div className="bg-white rounded-2xl shadow p-6">
         <h2 className="text-xl font-bold mb-4">Why Choose Us?</h2>
 
-        <ul className="space-y-4 text-sm text-gray-600">
-          <li className="flex gap-2">
-            <FaShieldAlt className="text-green-600 mt-1" />
-            100% verified sellers
+        <ul className="space-y-3 text-sm text-gray-600">
+          <li className="flex items-center gap-3">
+            <FaShieldAlt size={20} className="text-green-600" />
+            <div>
+              <p className="font-bold text-[18px]">Trusted Platform</p>
+              <p className="text-sm text-gray-500">
+                All sellers are verified and animals are carefully checked.
+              </p>
+            </div>
           </li>
 
-          <li className="flex gap-2">
-            <FaTags className="text-green-600 mt-1" />
-            Best affordable prices
+          <li className="flex items-center gap-3">
+            <FaTags size={20} className="text-green-600" />
+            <div>
+              <p className="font-bold text-[18px]">Safe & Secure</p>
+              <p className="text-sm text-gray-500">
+                Your payment and personal information are 100% safe.
+              </p>
+            </div>
           </li>
 
-          <li className="flex gap-2">
-            <FaCheckCircle className="text-green-600 mt-1" />
-            Healthy animals guarantee
+          <li className="flex items-center gap-3">
+            <FaCheckCircle size={20} className="text-green-600" />
+            <div>
+              <p className="font-bold text-[18px]">Affordable Price</p>
+              <p className="text-sm text-gray-500">
+                Get the best quality animals at the best price.
+              </p>
+            </div>
           </li>
 
-          <li className="flex gap-2">
-            <FaHeadset className="text-green-600 mt-1" />
-            24/7 customer support
+          <li className="flex items-center gap-3">
+            <FaHeadset size={20} className="text-green-600" />
+            <div>
+              <p className="font-bold text-[18px]">Customer Support</p>
+              <p className="text-sm text-gray-500">
+                We are always here to help you.
+              </p>
+            </div>
           </li>
         </ul>
+
+        <Button variant="outline" className="mt-5 flex items-center gap-2">
+          Learn More <FaArrowRight />
+        </Button>
       </div>
     </div>
   );
-}
-{
-  /* <section className="py-16 px-4 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-2xl shadow p-6">
-            <h2 className="text-xl font-bold mb-4">Qurbani Tips</h2>
-
-            <ul className="space-y-3 text-sm text-gray-600">
-              <li className="flex gap-2 items-start">
-                <FaCheckCircle className="text-green-600 mt-1" />
-                Choose a healthy animal with clear eyes and active behavior
-              </li>
-              <li className="flex gap-2 items-start">
-                <FaCheckCircle className="text-green-600 mt-1" />
-                Check minimum age requirement properly
-              </li>
-              <li className="flex gap-2 items-start">
-                <FaCheckCircle className="text-green-600 mt-1" />
-                Ensure proper feeding and clean environment
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow p-6">
-            <h2 className="text-xl font-bold mb-4">Top Breeds</h2>
-
-           
-          </div>
-          <div className="bg-white rounded-2xl shadow p-6">
-            <h2 className="text-xl font-bold mb-4">Why Choose Us?</h2>
-
-            <ul className="space-y-4 text-sm text-gray-600">
-              <li className="flex gap-2">
-                <FaShieldAlt className="text-green-600 mt-1" />
-                100% verified sellers
-              </li>
-
-              <li className="flex gap-2">
-                <FaTags className="text-green-600 mt-1" />
-                Best affordable prices
-              </li>
-
-              <li className="flex gap-2">
-                <FaCheckCircle className="text-green-600 mt-1" />
-                Healthy animals guarantee
-              </li>
-
-              <li className="flex gap-2">
-                <FaHeadset className="text-green-600 mt-1" />
-                24/7 customer support
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section> */
 }
