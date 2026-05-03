@@ -39,9 +39,13 @@ const Featured_card = ({ cows }) => {
           <p>{cows.location}</p>
         </div>
       </div>
-      <Link href={`/all-animals/${cows.id}`} className={"w-full"}>
-        <Button variant="outline">View Details</Button>
-      </Link>
+      <div className="w-full">
+        <Link href={`/all-animals/${cows.id}`} className={"w-full"}>
+          <Button variant="outline" className="w-full">
+            View Details
+          </Button>
+        </Link>
+      </div>
     </Card>
   );
 };

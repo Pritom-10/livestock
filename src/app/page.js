@@ -1,4 +1,5 @@
 import Banner from "@/Component/Banner";
+import ExtraData from "@/Component/ExtraData";
 import Featured from "@/Component/Featured";
 import Image from "next/image";
 
@@ -6,7 +7,8 @@ export default function Home() {
   return (
     <div >
       <Banner />
-      <Featured/>
+      <Featured />
+      <ExtraData/>
     </div>
   );
 }

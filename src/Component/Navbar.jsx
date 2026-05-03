@@ -60,7 +60,7 @@ const Navbar = () => {
 
         <div className="flex gap-4">
           {!user && (
-            <div className="flex items-center gap-3 text-sm">
+            <div className="flex items-center gap-3 text-sm font-bold">
               <Link
                 href="/signup"
                 className={`px-4 py-2 rounded-lg transition ${
