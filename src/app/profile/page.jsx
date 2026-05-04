@@ -8,7 +8,7 @@ const Profile = () => {
 
   
   return (
-    <div >
+    <div className="min-h-full my-auto">
       <Card className="max-w-96 mx-auto flex flex-col items-center border">
         <Avatar className="h-20 w-20">
           <Avatar.Image

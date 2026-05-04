@@ -18,7 +18,7 @@ const cowsId = async ({ params }) => {
   return (
     <div className="mt-10">
       <Card>
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col lg:flex-row items-center gap-5">
           <Card>
             <div className="space-y-4">
               <h2 className="flex items-center gap-1 text-2xl font-bold">

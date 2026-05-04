@@ -25,15 +25,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="en" data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full flex flex-col">
         <Navbar />
         <ToastProvider position="top-right" />
-        <main className="max-w-7xl mx-auto">
-          {children}
-        </main>
+        <main className="pt-10 max-w-7xl mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

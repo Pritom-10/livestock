@@ -7,7 +7,7 @@ export default function ExtraSection({cow}) {
  
   
   return (
-    <div className="grid grid-cols-3 gap-5 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
       <Card>
         <h2 className="bg-linear-to-r from-green-500 to-emerald-700 text-transparent bg-clip-text text-xl font-bold text-center">
           Top Breeds

@@ -12,7 +12,7 @@ const AllAnimals = async ({ searchParams }) => {
     <div>
       <h2 className="text-2xl font-bold m-3">All Animals</h2>
       <Category/>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 gap-5">
         {filteredPhotos.map(cows => <Featured_card key={cows.id} cows={cows} />)}
       </div>
     </div>

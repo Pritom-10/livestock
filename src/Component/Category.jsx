@@ -8,14 +8,14 @@ const Category = async () => {
 
   
   return (
-    <div className=" flex  gap-5">
+    <div className=" grid lg:grid-cols-7 grid-cols-3 gap-2">
       {categories.map((category) => (
         <Link
           
           key={category.id}
           href={`?category=${category.name}`}
         >
-          <Button className={"mb-7 "}>{category.name}</Button>
+          <Button className={"mb-7 "}>{category.name} Tk</Button>
         </Link>
       ))}
     </div>

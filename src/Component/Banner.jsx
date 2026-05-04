@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="w-full h-full rounded-lg bg-black/10 flex items-center relative">
           <div className="max-w-7xl mx-auto w-full px-6 text-white absolute bottom-38 left-16">
             <Link href="/all-animals">
-              <Button className="bg-linear-to-r from-pink-500 via-purple-500 to-red-500 text-2xl p-6">
+              <Button className="bg-linear-to-r from-pink-500 via-purple-500 to-red-500 lg:text-2xl p-2 md:p-4 lg:p-6">
                 <FaPaw className="mr-2" />
                 Browse
               </Button>
