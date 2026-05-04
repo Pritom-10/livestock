@@ -3,7 +3,6 @@ import { Button, Card,Chip } from "@heroui/react";
 import Image from "next/image";
 import {
   FaTag,
-  FaDollarSign,
   FaWeightHanging,
   FaBirthdayCake,
   FaMapMarkerAlt,
@@ -16,7 +15,7 @@ const cowsId = async ({ params }) => {
   const photos = await res.json();
   const photo = photos.find(p => p.id == id);
   return (
-    <div className="mt-10">
+    <div className="mt-10 min-h-screen ">
       <Card>
         <div className="flex flex-col lg:flex-row items-center gap-5">
           <Card>
@@ -47,7 +46,7 @@ const cowsId = async ({ params }) => {
                   {photo.breed}
                 </p>
               </div>
-              <Booking/>
+              <Booking />
             </div>
           </Card>
           <div className="space-y-4">

@@ -8,7 +8,7 @@ const Profile = () => {
 
   
   return (
-    <div className="min-h-full my-auto">
+    <div className="min-h-screen  my-auto">
       <Card className="max-w-96 mx-auto flex flex-col items-center border">
         <Avatar className="h-20 w-20">
           <Avatar.Image
@@ -20,7 +20,7 @@ const Profile = () => {
         </Avatar>
         <h2 className="text-2xl font-bold">{user?.name}</h2>
         <p className="text-muted">{user?.email}</p>
-        <Updatemodal/>
+        <Updatemodal />
       </Card>
     </div>
   );

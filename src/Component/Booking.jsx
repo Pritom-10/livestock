@@ -9,7 +9,6 @@ import successAnimation from "../animation/success.json";
 const Booking = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
     toast.custom(() => (
       <div className="bg-white p-4 rounded-xl shadow flex items-center gap-3">
         <Lottie animationData={successAnimation} className="w-12" />
