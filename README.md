@@ -122,7 +122,7 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 Clone the repository:
 
 ```
-git clone [https://github.com/your-username/pineapple-qurbanihat.git](https://github.com/your-username/pineapple-qurbanihat.git)
+git clone https://github.com/Pritom-10/livestock.git
 ```
 ** Install dependencies:
 
