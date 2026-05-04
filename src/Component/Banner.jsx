@@ -4,7 +4,7 @@ import { FaPaw } from "react-icons/fa";
 const Banner = () => {
   return (
     <div className="">
-      <div className="bg-[url('https://i.postimg.cc/050MrtTt/banner.png')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
+      <div className="bg-[url('https://i.postimg.cc/050MrtTt/banner.png')] h-[60vh] w-11/12 mx-auto bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
         <div className="w-full h-full rounded-lg bg-black/10 flex items-center relative">
           <div className="max-w-7xl mx-auto w-full px-6 text-white absolute bottom-38 left-16">
             <Link href="/all-animals">
