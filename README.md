@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 Pineapple QurbaniHat – Livestock Booking Platform
 
-## Getting Started
+A modern livestock marketplace where users can explore animals for Qurbani, view detailed information, and book animals after authentication. Built with Next.js and a clean responsive UI, focusing on real-world booking flow and secure user experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌐 Live Demo
+https://your-live-site-url.com
+
+---
+
+## 📌 Project Purpose
+This project is developed as part of **Assignment Category-A8**.  
+It demonstrates a full-stack-like frontend application with authentication, protected routes, dynamic routing, and a clean marketplace UI for livestock booking.
+
+---
+
+## 🚀 Key Features
+
+### 🏠 General
+- Fully responsive design (mobile, tablet, desktop)
+- Modern UI with unique marketplace layout
+- SPA routing with Next.js
+- Error-free page reload handling on all routes
+
+### 🐄 Animal Marketplace
+- Browse livestock animals (cow, goat, etc.)
+- View detailed animal information
+- Sort animals by price
+- Featured animals section on homepage
+- Extra sections:
+  - Qurbani Tips
+  - Top Breeds
+
+### 📄 Animal Details Page
+- Full animal description view
+- Booking form (Name, Email, Phone, Address)
+- Requires authentication to book
+- Success toast on booking submission
+- Form resets after submission (no persistent storage)
+
+### 🔐 Authentication System
+- Email/password login
+- Google social login
+- User registration system
+- Protected routes for authenticated users
+- Redirect after login/logout
+
+### 👤 User Profile System
+- My Profile page (name, email, photo)
+- Update profile information (name + image)
+- Uses Better Auth update API
+
+### 🔔 UI/UX Enhancements
+- Toast notifications for success/error messages
+- Loading states during data fetch
+- Custom Not Found page
+- Smooth animations (using Lottie / animation library)
+
+---
+
+## 🧭 Routes Structure
+
+### Public Routes
+- `/` → Home Page
+- `/animals` → All Animals Page
+- `/login` → Login Page
+- `/register` → Register Page
+
+### Private Routes
+- `/details-page` → Animal Details Page
+- `/my-profile` → User Profile Page
+
+---
+
+## 🧩 Technologies Used
+
+### Frontend
+- Next.js (App Router)
+- React.js
+- Tailwind CSS
+
+### Authentication
+- Better Auth
+
+### UI & UX
+- React Icons
+- React Toastify (or any toast library)
+- Lottie / Animation Library (Animate.css / React Spring / Lottie)
+
+### Deployment
+- Vercel / Render
+
+---
+
+## 📦 NPM Packages Used
+
+- `next`
+- `react`
+- `react-dom`
+- `tailwindcss`
+- `better-auth`
+- `react-icons`
+- `react-toastify`
+- `lottie-react` (or animation library used)
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file and add:
+
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+BETTER_AUTH_SECRET=your_secret_key
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
 ```
+---
+## Installation
+Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+git clone [https://github.com/your-username/pineapple-qurbanihat.git](https://github.com/your-username/pineapple-qurbanihat.git)
+```
+** Install dependencies:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+npm install
+```
+** Start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+npm run dev
+```
+---
+ ## Author
 
-## Learn More
+ ** Pritom Barua Shiro ** 
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
