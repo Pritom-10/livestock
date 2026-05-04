@@ -5,7 +5,7 @@ import Image from "next/image";
 const Footer=()=> {
   return (
     <footer className="bg-gray-950 text-gray-400 mt-20 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-10">
         <div>
           <div className="flex items-center gap-2">
             <Image src={"/logo.png"} width={20} height={15} alt="logo" />
@@ -29,7 +29,7 @@ const Footer=()=> {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 lg:grid lg:grid-cols-3">
           <div>
             <h3 className="text-white font-medium mb-3">Marketplace</h3>
             <ul className="space-y-2 text-sm">
