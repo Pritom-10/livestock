@@ -22,7 +22,6 @@ const Navbar = () => {
    }`;
   };
   
- const isAuthPage = path === "/signup" || path === "/signin";
   return (
     <div className="pb-28">
       <nav className="fixed top-0 backdrop-blur-md bg-white/30 shadow-md flex justify-between items-center py-3 w-full px-6">

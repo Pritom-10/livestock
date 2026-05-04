@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { FaCheckCircle, FaShieldAlt, FaTags, FaHeadset, FaArrowRight } from "react-icons/fa";
-import { Card } from "@heroui/react";
+import { FaCheckCircle, FaShieldAlt, FaTags, FaHeadset, FaArrowRight, FaTruck } from "react-icons/fa";
+import { Card, Separator } from "@heroui/react";
+import Link from "next/link";
 import { Button } from "@heroui/react";
 export default function ExtraSection({cow}) {
  
@@ -8,7 +9,11 @@ export default function ExtraSection({cow}) {
   return (
     <div className="grid grid-cols-3 gap-5 max-w-7xl mx-auto">
       <Card>
-        <div className="space-y-12">
+        <h2 className="bg-linear-to-r from-green-500 to-emerald-700 text-transparent bg-clip-text text-xl font-bold text-center">
+          Top Breeds
+        </h2>
+        <Separator className="w-full h-2 bg-green-700" />
+        <div className="space-y-6">
           {cow.map((cows) => (
             <div key={cows.id} className="flex items-center gap-5">
               <div>
@@ -20,7 +25,7 @@ export default function ExtraSection({cow}) {
                   alt={cows.name}
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <div className="flex items-center gap-4">
                   <p className="font-semibold">{cows.name}</p>
                   <p className="bg-green-300 rounded-2xl p-2">{cows.breed}</p>
@@ -30,11 +35,18 @@ export default function ExtraSection({cow}) {
             </div>
           ))}
         </div>
+        <Link href={"/all-animals"}>
+          <Button className={"mt-5"} variant="outline">
+            View All Breeds <FaArrowRight />
+          </Button>
+        </Link>
       </Card>
 
       <div className="bg-white rounded-2xl shadow p-6">
-        <h2 className="text-xl font-bold mb-4">Qurbani Tips</h2>
-
+        <h2 className="text-xl text-center font-bold mb-2 bg-linear-to-r from-green-500 to-emerald-700 text-transparent bg-clip-text ">
+          Qurbani Tips
+        </h2>
+        <Separator className="w-full h-2 bg-green-700 mb-4" />
         <ul className="space-y-3 text-sm text-gray-600">
           <li className="flex items-center gap-3">
             <FaCheckCircle size={20} className="text-green-600" />
@@ -73,14 +85,25 @@ export default function ExtraSection({cow}) {
               </p>
             </div>
           </li>
+          <li className="flex gap-3 items-center">
+            <FaCheckCircle size={20} className="text-green-600 mt-1" />
+            <div>
+              <p className="font-bold text-[18px]">Proper rest and space</p>
+              <p className="text-sm text-gray-500">
+                Ensure the animal has enough space and rest before Qurbani day.
+              </p>
+            </div>
+          </li>
         </ul>
-        <Button variant="outline" className={"mt-2"}>
+        <Button variant="outline" className={"mt-5 flex items-center"}>
           Read More tips <FaArrowRight />
         </Button>
       </div>
       <div className="bg-white rounded-2xl shadow p-6">
-        <h2 className="text-xl font-bold mb-4">Why Choose Us?</h2>
-
+        <h2 className="text-xl font-bold mb-4 bg-linear-to-r from-green-500 to-emerald-700 text-transparent bg-clip-text text-center">
+          Why Choose Us?
+        </h2>
+        <Separator className="w-full h-2 bg-green-700 mb-4" />
         <ul className="space-y-3 text-sm text-gray-600">
           <li className="flex items-center gap-3">
             <FaShieldAlt size={20} className="text-green-600" />
@@ -98,6 +121,15 @@ export default function ExtraSection({cow}) {
               <p className="font-bold text-[18px]">Safe & Secure</p>
               <p className="text-sm text-gray-500">
                 Your payment and personal information are 100% safe.
+              </p>
+            </div>
+          </li>
+          <li className="flex items-center gap-3">
+            <FaTruck size={20} className="text-green-600" />
+            <div>
+              <p className="font-bold text-[18px]">Fast Delivery</p>
+              <p className="text-sm text-gray-500">
+                We ensure quick and reliable delivery to your location.
               </p>
             </div>
           </li>

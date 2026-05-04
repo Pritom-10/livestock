@@ -8,10 +8,14 @@ const Category = async () => {
 
   
   return (
-    <div>
+    <div className=" flex  gap-5">
       {categories.map((category) => (
-        <Link key={category.id} href={`?category=${category.name}`}>
-          <Button>{category.name}</Button>
+        <Link
+          
+          key={category.id}
+          href={`?category=${category.name}`}
+        >
+          <Button className={"mb-7 "}>{category.name}</Button>
         </Link>
       ))}
     </div>

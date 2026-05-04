@@ -13,8 +13,8 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import toast from "react-hot-toast";
 
 export default function SignIn() {
  
@@ -30,15 +30,24 @@ export default function SignIn() {
       password,
       callbackURL: '/'
     })
-    
+    if (error) {
+      toast.error(error.message || "Invalid email or password");
+    } else {
+      toast.success("Login successful!");
+    }
     
   };
 
   const handleGoogle = async () => {
-    await authClient.signIn.social({
-      provider:'google'
-    })
-  }
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+      });
+      toast.success("Redirecting to Google...");
+    } catch (err) {
+      toast.error("Google sign-in failed");
+    }
+  };
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
